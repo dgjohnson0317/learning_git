@@ -11,3 +11,6 @@ next, you can run `git push -u origin (branchname)` to actually commit your chan
 you can also create a new branch with `git branch (branch_name)`. to switch between old and new branches, you can use `git switch (branch name)`.
 
 Now, to merge, users should use `git merge (branchname)` while in the desired branch they want to merge everything to (likely `main` or `master`). 
+
+## VScode specific notes
+some other things to note, particularly somem details with VScode. Once VScode is set up and linked with your github (which I'll go into at a later time), it does become quite easy to visualize where exactly your specific branch/version/everything is in relation to everything else, particularly with the graph the pops up in the bottom left of the "Source control" window. It will show you the message history, as well as show you every change that was made for each commit. 
