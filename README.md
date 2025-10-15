@@ -13,6 +13,8 @@ you can also create a new branch with `git branch (branch_name)`. to switch betw
 
 Now, to merge, users should use `git merge (branchname)` while in the desired branch they want to merge everything to (likely `main` or `master`). 
 
+If you would like to checkout a remote branch, you can first use `git branch -r` to show all remote branches. Then, using `git checkout` you can 
+
 ## VScode specific notes
 some other things to note, particularly somem details with VScode. Once VScode is set up and linked with your github (which I'll go into at a later time), it does become quite easy to visualize where exactly your specific branch/version/everything is in relation to everything else, particularly with the graph the pops up in the bottom left of the "Source control" window. It will show you the message history, as well as show you every change that was made for each commit. 
 
@@ -22,17 +24,21 @@ some other things to note, particularly somem details with VScode. Once VScode i
 ---|---
 git init | Initialize a new Git repository
 git status | Show branch, staged/untracked files
-git add <file> | Stage a file
+git add [file] | Stage a file
 git add . | Stage all changes
 git commit -m "message" | Commit staged changes
 git log --oneline --graph --all | Show commit history visually
-git remote add origin <url> | Add a remote repository
-git push -u origin <branch> | Push branch to remote and track
-git branch <name> | Create a new branch
-git switch <name> | Switch branches
-git merge <branch> | Merge another branch into current branch
-git branch -d <branch> | Delete a local branch
-git push origin --delete <branch> | Delete a remote branch
+git remote add origin [url] | Add a remote repository
+git push -u origin [branch] | Push branch to remote and track
+git branch | Show all current local (on device) branches in repository
+git pull | Pulls update from the tracked remote branch
+git branch -r |  Show all remote branches in repository
+git branch [name] | Create a new branch
+git checkout -b [local_branch] [remote_branch] | Creates a new branch locally and sets the upstream branch to remote_branch
+git switch [name] | Switch branches
+git merge [branch] | Merge another branch into current branch
+git branch -d [branch] | Delete a local branch
+git push origin --delete [branch] | Delete a remote branch
 
 
 # Git Important Definitions
